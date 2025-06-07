@@ -1,0 +1,46 @@
+<style>
+body{background: #777;}
+.content {
+border-radius: 10px;
+max-width: 900px;
+margin: auto;
+background: gray;
+padding: 15px;}
+
+.welcome {
+padding: 32px 370px;
+font-size: 32px;
+border-radius: 10px;
+border: 10px solid black;
+background-color: orange;}
+
+.box0{padding: 23px 32px;
+font-size: 22px;
+border-radius: 10px 30px 60px;
+border: 10px solid black;
+background-color: white;}
+
+img {
+display: block;
+border-radius: 10px;
+margin-left: auto;
+margin-right: auto;}
+
+.box1{padding: 23px 32px;
+font-size: 22px;
+border-radius: 10px 30px 60px;
+border: 10px solid black;
+background-color: yellow;}
+
+.box2{padding: 1px 32px;
+font-size: 22px;
+border-radius: 10px 30px 60px;
+border: 10px solid black;
+background-color: lightblue;}
+
+.box3{padding: 1px 32px;
+font-size: 22px;
+border-radius: 10px 30px 60px;
+border: 10px solid black;
+background-color: #ffbf00;}
+</style>

@@ -1,0 +1,122 @@
+<style>
+
+.outer{
+position:relative;}	
+
+.box{
+	postion:absolute;
+	/*text-align:right;*/
+	display: flex;
+	align-items: flex-end;
+	justify-content: right;
+	width:200px;
+	height:200px;}
+
+/* For exercise 2.1 
+#box_1{
+background-color:#ee3e64;}
+
+#box_2{
+background-color:#44accf;}
+
+#box_3{
+background-color:#b7d84b;}
+
+#box_4{
+background-color:#FFFF00;}
+*/
+
+
+/* For exercise 2.2
+#box_1{
+float: left;
+background-color:#ee3e64;}
+
+#box_2{
+float: left;
+background-color:#44accf;}
+
+#box_3{
+float: left;
+background-color:#b7d84b;}
+
+#box_4{
+float: left;
+background-color:#FFFF00;}
+*/
+
+/* For exercise 2.3
+#box_1{
+float: left;
+background-color:#ee3e64;}
+
+#box_2{
+float: left;
+background-color:#44accf;}
+
+#box_3{
+clear: left;
+float: left;
+background-color:#b7d84b;}
+
+#box_4{
+float: left;
+background-color:#FFFF00;}
+*/
+
+/* For exercise 2.4
+#box_1{
+position: absolute;
+left: 200px;
+top: 200px;
+background-color: #ee3e64;}
+
+#box_2{
+position: absolute;
+left: 400px;
+top: 200px;
+background-color: #44accf;}
+
+#box_3{
+position: absolute;
+left: 200px;
+top: 400px;
+background-color: #b7d84b;}
+
+#box_4{
+position: absolute;
+left: 400px;
+top: 400px;
+background-color: #FFFF00;}
+*/
+
+/* For exercise 2.5 */
+#box_1{
+position: absolute;
+left: 40px;
+top: 300px;
+z-index: 4;
+background-color: #ee3e64;}
+
+#box_2{
+position: absolute;
+left: 70px;
+top: 330px;
+z-index: 3;
+background-color: #44accf;}
+
+#box_3{
+position: absolute;
+left: 100px;
+top: 360px;
+z-index: 2;
+background-color: #b7d84b;}
+
+#box_4{
+position: absolute;
+left: 130px;
+top: 390px;
+z-index: 1;
+background-color: #FFFF00;}
+
+</style>
