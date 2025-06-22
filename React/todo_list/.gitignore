@@ -1,0 +1,12 @@
+# Ignore dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+
+# System files
+.DS_Store
+Thumbs.db
