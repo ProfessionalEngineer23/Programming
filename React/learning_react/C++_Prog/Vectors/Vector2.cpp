@@ -1,0 +1,9 @@
+vector<string> words;
+sort(words.begin(), words.end());
+for (unsigned i=1; i<words.size(); ++i) {
+if(words[i-1]==words[i])
+“get rid of words[i]”
+ // (pseudocode)
+}
+for (int i=0; i<words.size(); ++i)
+cout<<words[i]<< "\n";
