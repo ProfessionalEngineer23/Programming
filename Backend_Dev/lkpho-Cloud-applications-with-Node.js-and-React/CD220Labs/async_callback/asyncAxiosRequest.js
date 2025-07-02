@@ -27,3 +27,13 @@ const connectToURL = (url) => {
 connectToURL('https://raw.githubusercontent.com/ibm-developer-skills-network/lkpho-Cloud-applications-with-Node.js-and-React/master/CD220Labs/async_callback/sampleData.json');
 // Invalid URL
 connectToURL('https://raw.githubusercontent.com/ibm-developer-skills-network/lkpho-Cloud-applications-with-Node.js-and-React/master/CD220Labs/async_callback/sampleDate.json');
+
+/* Output:
+> node asyncAxiosRequest.js
+Promise { <pending> }
+Promise { <pending> }
+Rejected for url https://raw.githubusercontent.com/ibm-developer-skills-network/lkpho-Cloud-applications-with-Node.js-and-React/master/CD220Labs/async_callback/sampleDate.json
+Error: Request failed with status code 404 //Invalid URL
+Fulfilled
+{ name: 'Jason', age: '25', department: 'IT' }
+*/

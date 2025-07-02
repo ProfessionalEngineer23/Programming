@@ -1,3 +1,5 @@
+//To run node ExampleSyncIO.js
+
 // Requiring fs module - fs is used for File I/O
 let fs = require('fs');
 
