@@ -1,0 +1,60 @@
+<style>
+.body1{
+border-style:solid; 
+border-width:1px; 
+background-color:#ffffff;
+width:80%; 
+padding:20px; 
+margin-left:50px; 
+margin-top:20px; 
+overflow:auto;}
+
+.paragraph{
+border-style:solid; 
+border-width:1px; 
+padding:10px; 
+margin-top:20px; 
+margin-bottom:10px; 
+float:left; 
+width:60%; 
+z-index: 2;}
+
+.image{
+float:right; 
+z-index: 1;}
+
+.blockimage{
+margin-top: 20px; 
+clear:left; 
+z-index:1;}
+
+.image1{
+float:left; 
+padding: 10px; 
+border-style:solid; 
+border-width:1px; 
+margin-right: 5px;
+z-index:1;}
+
+.image2{
+float:left; 
+padding: 10px; 
+border-style:solid; 
+border-width:1px; 
+margin-right: 5px; 
+z-index: 1;}
+
+.image3{
+float:left; 
+padding: 10px; 
+border-style:solid; 
+border-width:1px; 
+margin-right: 5px; 
+z-index:1;}
+
+.image4{
+float:right; 
+clear:right; 
+margin-top:10px; 
+z-index: 1;}
+</style>

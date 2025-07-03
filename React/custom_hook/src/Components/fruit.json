@@ -1,0 +1,142 @@
+[
+  {
+"name": "Banana",
+"image": "https://blog-images-1.pharmeasy.in/blog/production/wp-content/uploads/2021/01/30152155/shutterstock_518328943-1.jpg",
+"benefits": "Energy boost, aids digestion and etc",
+"importance": "High in potassium and vitamins and fatty acids",
+"best_time_to_intake": "Morning or as a snack"
+  },
+  {
+"name": "Spinach",
+"image": "https://media.post.rvohealth.io/wp-content/uploads/2019/05/spinach-732x549-thumbnail.jpg",
+"benefits": "Strengthens bones, improves eyesight",
+"importance": "Rich in iron and antioxidants",
+"best_time_to_intake": "Lunch or dinner or breakfast"
+  },
+  {
+"name": "Salmon",
+"image": "https://www.onceuponachef.com/images/2018/02/pan-seared-salmon-.jpg",
+"benefits": "Promotes heart health, supports brain function",
+"importance": "High in omega-3 fatty acids",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Avocado",
+"image": "https://www.cookrepublic.com/wp-content/uploads/2023/08/green-avocado-salad-process11.jpg",
+"benefits": "Aids weight management, supports heart health",
+"importance": "Rich in healthy fats",
+"best_time_to_intake": "Morning or as a snack"
+  },
+  {
+"name": "Broccoli",
+"image": "https://detoxinista.com/wp-content/uploads/2021/03/instant-pot-steamed-broccoli-1.jpg",
+"benefits": "Helps prevent cancer, supports digestive health",
+"importance": "High in fiber and antioxidants",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Oats",
+"image": "https://www.allrecipes.com/thmb/nvX2ZrnQHpfSCBBmc5PTCWBlHEI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/263512-ddmfs-instant-pot-steel-cut-oats-3X4-2044-5ca39f404f6042d29321fa061aae0ce7.jpg",
+"benefits": "Lowers cholesterol, regulates blood sugar",
+"importance": "Rich in fiber and minerals",
+"best_time_to_intake": "Breakfast"
+  },
+  {
+"name": "Eggs",
+"image": "https://www.allrecipes.com/thmb/0VXMwCY9RVNrNvWcF_9v0iZpNqA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/JF_241160_CreamyCottageCheeseScrambled_4x3_12902-619d00dc88594ea9b8ed884a108db16d.jpg",
+"benefits": "Builds muscles, improves brain health",
+"importance": "High in protein and nutrients",
+"best_time_to_intake": "Breakfast or lunch"
+  },
+  {
+"name": "Yogurt",
+"image": "https://www.luvele.com.au/cdn/shop/articles/probiotic_yogurt_02_1024x.png?v=1585795322",
+"benefits": "Supports digestion, strengthens bones",
+"importance": "Rich in probiotics and calcium",
+"best_time_to_intake": "Snack or dessert"
+  },
+  {
+"name": "Blueberries",
+"image": "https://www.hkvitals.com/blog/wp-content/uploads/2023/09/900-9-1.jpg",
+"benefits": "Boosts brain health, supports heart health",
+"importance": "High in antioxidants and vitamins",
+"best_time_to_intake": "Morning or as a snack"
+  },
+  {
+"name": "Almonds",
+"image": "https://saaragroups.com/wp-content/uploads/2021/04/almond.jpg",
+"benefits": "Promotes heart health, aids weight management",
+"importance": "Rich in healthy fats and antioxidants",
+"best_time_to_intake": "Morning or as a snack"
+  },
+  {
+"name": "Chicken Breast",
+"image": "https://www.budgetbytes.com/wp-content/uploads/2024/01/Air-Fryer-Chicken-Breast-Plated.jpg",
+"benefits": "Builds lean muscle, aids weight loss",
+"importance": "High in protein",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Sweet Potatoes",
+"image": "https://www.eatingbirdfood.com/wp-content/uploads/2023/11/baked-sweet-potato-hero.jpg",
+"benefits": "Regulates blood sugar, supports eye health",
+"importance": "Rich in vitamins and fiber",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Quinoa",
+"image": "https://www.onceuponachef.com/images/2024/03/thai-quinoa-salad-1-760x933.jpg",
+"benefits": "Boosts metabolism, supports heart health",
+"importance": "High in protein and fiber",
+"best_time_to_intake": "Lunch or dinner"
+  },	
+  {
+"name": "Kale",
+"image": "https://joyfoodsunshine.com/wp-content/uploads/2021/05/kale-salad-recipe-3.jpg",
+"benefits": "Strengthens bones, reduces inflammation",
+"importance": "Rich in vitamins and antioxidants",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Apples",
+"image": "https://www.acouplecooks.com/wp-content/uploads/2022/11/Apple-Salad-010s.jpg",
+"benefits": "Supports heart health, aids digestion",
+"importance": "Rich in fiber and vitamins",
+"best_time_to_intake": "Morning or as a snack"
+  },
+  {
+"name": "Greek Yogurt",
+"image": "https://spicecravings.com/wp-content/uploads/2023/09/Greek-Yogurt-Parfait-Featured.jpg",
+"benefits": "Aids muscle recovery, supports digestion",
+"importance": "Rich in protein and probiotics",
+"best_time_to_intake": "Snack or dessert"
+  },
+  {
+"name": "Carrots",
+"image": "https://www.allrecipes.com/thmb/nH0ibTts6V4xHLjBPEtQt4Lbsuo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/18256-Buttery-Cooked-Carrots-DDMFS-2x1-416f927f836346b2886a5ac519f667f3.jpg",
+"benefits": "Promotes healthy eyesight, boosts immunity",
+"importance": "High in beta-carotene and minerals",
+"best_time_to_intake": "Morning or as a snack"
+  },
+  {
+"name": "Brown Rice",
+"image": "https://www.myweekendkitchen.in/?attachment_id=3777",
+"benefits": "Supports digestive health, provides stable energy",
+"importance": "Rich in fiber and minerals",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Tuna",
+"image": "https://www.bigbasket.com/media/uploads/p/l/40227733_1-fresho-yellofin-tuna-steaks.jpg",
+"benefits": "Promotes heart health, aids muscle repair",
+"importance": "High in protein and omega-3 fatty acids",
+"best_time_to_intake": "Lunch or dinner"
+  },
+  {
+"name": "Oranges",
+"image": "https://www.mashed.com/img/gallery/believe-it-or-not-oranges-dont-actually-exist-naturally-in-nature/l-intro-1676042900.jpg",
+"benefits": "Supports immune system, aids digestion",
+"importance": "Rich in vitamin C and fiber",
+"best_time_to_intake": "Morning or as a snack"
+  }
+]

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#button1").click(function(){
+$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+});
+$("#button2").click(function(){
+    $("#Photo")
+    .animate({left: '100px',
+    opacity: '0.5',
+    height: '150px',
+    width: '150px'})
+    .slideDown(3000)
+    .slideUp(3000)
+    });
+});
+</script>
+
+<style>
+body {
+text-align: center;}
+#Photo {
+position: relative;
+top: 20px;}
+</style>
+
+</head>
+<body>
+<p id="p1">jQuery is fun!!</p>
+<button id="button1">Click me</button>
+<button id="button2">Start Animation</button>
+<div>
+<img id="Photo" src="../images/photo.jpg" alt="Wall.E" style="width: 150px; height: 300;">
+</div>
+</body>
+</html>
