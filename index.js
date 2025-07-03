@@ -2,9 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const session = require('express-session')
 const routes = require('./router/friends.js')
-
 let users = []
-
 // Check if a user with the given username already exists
 const doesExist = (username) => {
     // Filter the users array for any user with the same username
@@ -18,7 +16,6 @@ const doesExist = (username) => {
         return false;
     }
 }
-
 // Check if the user with the given username and password exists
 const authenticatedUser = (username, password) => {
     // Filter the users array for any user with the same username and password
@@ -32,19 +29,14 @@ const authenticatedUser = (username, password) => {
         return false;
     }
 }
-
 const app = express();
-
 app.use(session({secret:"fingerpint"},resave=true,saveUninitialized=true));
-
 app.use(express.json());
-
 // Middleware to authenticate requests to "/friends" endpoint
 app.use("/friends", function auth(req, res, next) {
     // Check if user is logged in and has valid access token
     if (req.session.authorization) {
         let token = req.session.authorization['accessToken'];
-
         // Verify JWT token
         jwt.verify(token, "access", (err, user) => {
             if (!err) {
@@ -58,24 +50,20 @@ app.use("/friends", function auth(req, res, next) {
         return res.status(403).json({ message: "User not logged in" });
     }
 });
-
 // Login endpoint
 app.post("/login", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-
     // Check if username or password is missing
     if (!username || !password) {
         return res.status(404).json({ message: "Error logging in" });
     }
-
     // Authenticate user
     if (authenticatedUser(username, password)) {
         // Generate JWT access token
         let accessToken = jwt.sign({
             data: password
-        }, 'access', { expiresIn: 60 * 60 });
-
+        }, 'access', { expiresIn: 60 });
         // Store access token and username in session
         req.session.authorization = {
             accessToken, username
@@ -85,12 +73,10 @@ app.post("/login", (req, res) => {
         return res.status(208).json({ message: "Invalid Login. Check username and password" });
     }
 });
-
 // Register a new user
 app.post("/register", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-
     // Check if both username and password are provided
     if (username && password) {
         // Check if the user does not already exist
@@ -105,10 +91,6 @@ app.post("/register", (req, res) => {
     // Return error if username or password is missing
     return res.status(404).json({message: "Unable to register user."});
 });
-
-
 const PORT =5000;
-
 app.use("/friends", routes);
-
 app.listen(PORT,()=>console.log("Server is running"));
