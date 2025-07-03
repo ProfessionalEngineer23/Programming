@@ -47,4 +47,4 @@ app.get("/fetchMonth/:num", (req, res) => {
         // Send the corresponding month name if the number is valid
         res.send(months[num - 1]);
     }
-});
+}); 

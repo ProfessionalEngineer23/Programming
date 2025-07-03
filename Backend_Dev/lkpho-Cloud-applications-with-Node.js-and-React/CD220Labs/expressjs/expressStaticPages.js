@@ -13,3 +13,5 @@ app.listen(3333, () => {
 });
 
 //When running open: http://localhost:3333/ReactCalc.html
+// Or: http://localhost:3333/kitten.jpeg
+// Or: http://localhost:3333/translateToSpanish.html
