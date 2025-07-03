@@ -137,5 +137,8 @@ build/
 .env.test.local
 .env.production.local
 
-# etc
-
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
