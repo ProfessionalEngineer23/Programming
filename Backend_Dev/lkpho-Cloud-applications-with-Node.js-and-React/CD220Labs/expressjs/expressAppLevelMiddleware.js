@@ -7,7 +7,7 @@ const app = new express();
 // Middleware to check for a specific password in query parameters
 app.use(function (req, res, next) {
     // Check if the password query parameter matches the expected value
-    if (req.query.password !== "pwd123") {
+    if (req.query.password !== "pwd123" && req.query.password !== "password123") {
         // Send an error response if the password does not match
         return res.status(402).send("This user cannot login ");
     }

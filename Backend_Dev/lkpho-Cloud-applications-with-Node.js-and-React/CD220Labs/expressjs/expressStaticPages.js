@@ -11,3 +11,5 @@ app.use(express.static('cad220_staticfiles'));
 app.listen(3333, () => {
     console.log(`Listening at http://localhost:3333`);
 });
+
+//When running open: http://localhost:3333/ReactCalc.html
