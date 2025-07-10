@@ -1,14 +1,43 @@
-# Condition statement example
+# Dictionary of players with their sports and achievements details
+players = {
+    "Serena Williams": {"sport": "Tennis", "achievements": 23},
+    "Lionel Messi": {"sport": "Soccer", "achievements": 7},
+    "Michael Phelps": {"sport": "Swimming", "achievements": 23},
+    "Usain Bolt": {"sport": "Athletics", "achievements": 8},
+    "Roger Federer": {"sport": "Tennis", "achievements": 20},
+    "Cristiano Ronaldo": {"sport": "Soccer", "achievements": 5}
+}
 
-album_year = 1983
-#album_year = 1970
+# Example 1: Lionel Messi
+player_name = "Lionel Messi"
+sport = players[player_name]["sport"]
+achievements = players[player_name]["achievements"]
 
-if album_year > 1980:
-    print("Album year is greater than 1980")
-elif album_year == 1980:
-    print("The year is exactly 1980!")
+if achievements > 10:
+    print(f"{player_name} plays {sport} and has {achievements} achievements.")
 else:
-    print("less than 1980")
+    print(f"{player_name} does not have more than 10 achievements.")
 
-print('do something..')
+print()
 
+# Example 2: Usain Bolt
+player_name = "Usain Bolt"
+sport = players[player_name]["sport"]
+achievements = players[player_name]["achievements"]
+
+if achievements < 10 and sport != "Soccer":
+    print(f"{player_name} plays {sport} and has only {achievements} achievements.")
+else:
+    print(f"{player_name} does not meet the criteria.")
+
+print()
+
+# Example 3: Roger Federer
+player_name = "Roger Federer"
+sport = players[player_name]["sport"]
+achievements = players[player_name]["achievements"]
+
+if sport == "Tennis" or achievements == 20:
+    print(f"{player_name} meets the criteria! They play {sport} and have {achievements} achievements.")
+else:
+    print(f"{player_name} does not meet the criteria.")
