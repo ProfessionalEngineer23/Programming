@@ -14,7 +14,7 @@ sport = players[player_name]["sport"]
 achievements = players[player_name]["achievements"]
 
 if achievements > 10:
-    print(f"{player_name} plays {sport} and has {achievements} achievements.")
+    print(f"\n{player_name} plays {sport} and has {achievements} achievements.")
 else:
     print(f"{player_name} does not have more than 10 achievements.")
 
@@ -38,6 +38,6 @@ sport = players[player_name]["sport"]
 achievements = players[player_name]["achievements"]
 
 if sport == "Tennis" or achievements == 20:
-    print(f"{player_name} meets the criteria! They play {sport} and have {achievements} achievements.")
+    print(f"{player_name} meets the criteria! They play {sport} and have {achievements} achievements.\n")
 else:
     print(f"{player_name} does not meet the criteria.")
