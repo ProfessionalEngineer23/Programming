@@ -230,6 +230,16 @@ print("\neven for array2",even_arr22)
 odd_arr22=arr22[1:5:2]
 print("\nodd for array2",odd_arr22)
 
+# Reshaping
+a = np.array([1, 2, 3, 4, 5, 6])
+b = a.reshape(2, 3)
+
+print("\n", b, "\nShape: ", d.shape)
+
+# Output:
+# [[1 2 3]
+#  [4 5 6]]
+
 
 
 
