@@ -31,6 +31,8 @@ print("\n", df.mean())
 from nba_api.stats.static import teams
 import matplotlib.pyplot as plt
 
+# This function converts a list of dictionaries (each representing an NBA team) 
+# into a single dictionary of lists (one for each column).
 def one_dict(list_dict):
     keys=list_dict[0].keys()
     out_dict={key:[] for key in keys}
