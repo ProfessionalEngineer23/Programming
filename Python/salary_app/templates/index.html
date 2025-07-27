@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salary Lookup</title>
+</head>
+<body>
+  <h1>Enter Job Title</h1>
+  <input type="text" id="jobTitle" placeholder="e.g. Data Scientist" />
+  <button onclick="fetchSalary()">Get Salary Info</button>
+
+  <div id="results"></div>
+
+  <script>
+    async function fetchSalary() {
+      const title = document.getElementById("jobTitle").value;
+      const res = await fetch("/get-salary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ job_title: title })
+      });
+      const data = await res.json();
+
+      document.getElementById("results").innerHTML = `
+        <p><strong>Job:</strong> ${data.title}</p>
+        <p><strong>Country:</strong> ${data.country}</p>
+        <p><strong>Average Salary:</strong> €${data.avg_salary}</p>
+        <p><strong>Cost of Living (monthly):</strong> €${data.cost_of_living}</p>
+        <p><strong>Net Annual Value:</strong> €${data.net}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
