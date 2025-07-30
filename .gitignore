@@ -199,3 +199,9 @@ dkms.conf
 
 # MD20241025-01 Ignore /bin directory
 /bin
+
+.env
+errors.log
+digikey_cache/
+__pycache__/
+*.pyc

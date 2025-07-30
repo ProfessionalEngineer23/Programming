@@ -1,0 +1,8 @@
+Manufacturer,Part Number,Short Description,Detailed Description,Category,Family,Quantity Available,Availability,Pricing,Datasheet,DigiKey URL
+"{'id': 1690, 'name': 'Raspberry Pi'}",SC0914(13),"{'detailed_description': 'ARM® Cortex®-M0+ - Microcontroller IC 32-Bit '
+                         'Dual-Core 133MHz External Program Memory 56-QFN '
+                         '(7x7)',
+ 'product_description': 'IC MCU 32BIT EXT MEM 56QFN'}","{'detailed_description': 'ARM® Cortex®-M0+ - Microcontroller IC 32-Bit '
+                         'Dual-Core 133MHz External Program Memory 56-QFN '
+                         '(7x7)',
+ 'product_description': 'IC MCU 32BIT EXT MEM 56QFN'}",Integrated Circuits (ICs),N/A,57255,In Stock,Not available,https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf,https://www.digikey.ie/en/products/detail/SC0914(13)
