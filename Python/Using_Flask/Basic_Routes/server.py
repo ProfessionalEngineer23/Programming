@@ -19,7 +19,7 @@ def hello_world():
 
 
 # Ran command in separate terminal: 
-# curl -X GET -i -w '\n' localhost:5000
+# curl.exe -X GET -i -w '\n' localhost:5000
 
 # Output:
 # (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python> curl.exe -X GET -i -w '\n' localhost:5000
@@ -32,3 +32,9 @@ def hello_world():
 
 # Hello, World!
 # (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python> 
+
+# Optional:
+
+# If working in the terminal becomes difficult because the command prompt is long, 
+# you can shorten the prompt using the following command:
+# export PS1="[\[\033[01;32m\]\u\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]]\$ "
