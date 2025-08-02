@@ -13,6 +13,9 @@ def hello_world():
     # Function that handles requests to the root URL
     return "Hello, World!"
 
+# To activate venv enviornment: 
+# C:\Users\nikit\Documents\GitHub\Programming\.venv\Scripts\Activate.ps1
+
 # To Host:
 # (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\lab> flask --app server --debug run
 # >>

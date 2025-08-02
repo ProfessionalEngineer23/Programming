@@ -94,4 +94,9 @@ def test500():
 # curl.exe http://localhost:5000/test500
 
 # Outputs: 
-# To be added...
+
+# (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask> curl.exe http://localhost:5000/test500
+# {
+#   "message": "Forced exception for testing"
+# }
+# (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask> 

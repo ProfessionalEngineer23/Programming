@@ -103,4 +103,41 @@ def add_by_uuid():
 #   --data '{}'
 
 # Outputs: 
-# To be added...
+
+# Made a file called person.json with the json formatted information about the person to be POSTED
+
+# (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask>
+# curl.exe -X POST -i -w "`n" `
+#   --url http://localhost:5000/person `
+#   --header "Content-Type: application/json" `
+#   --data "@person.json"
+
+# HTTP/1.1 200 OK
+# Server: Werkzeug/2.2.3 Python/3.13.4
+# Date: Sat, 02 Aug 2025 22:18:08 GMT
+# Content-Type: application/json
+# Content-Length: 56
+# Connection: close
+#
+# {
+#   "message": "4e1e61b4-8a27-11ed-a1eb-0242ac120002"
+# }
+
+# (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask>
+# curl.exe -X POST -i -w "`n" `
+#   --url http://localhost:5000/person `
+#   --header "Content-Type: application/json" `
+#   --data "{}"
+
+# HTTP/1.1 422 UNPROCESSABLE ENTITY
+# Server: Werkzeug/2.2.3 Python/3.13.4
+# Date: Sat, 02 Aug 2025 22:19:50 GMT
+# Content-Type: application/json
+# Content-Length: 43
+# Connection: close
+#
+# {
+#   "message": "Invalid input parameter"
+# }
+
+# (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask>

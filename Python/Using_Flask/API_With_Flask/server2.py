@@ -47,3 +47,34 @@ def index_explicit():
 # curl.exe -X GET -i -w '\n' localhost:5000
 # curl.exe -X GET -i -w '\n' localhost:5000/no_content
 # curl.exe -X GET -i -w '\n' localhost:5000/exp
+
+# Outputs: 
+
+# PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask> curl.exe -X GET -i -w '\n' localhost:5000
+# HTTP/1.1 200 OK
+# Server: Werkzeug/2.2.3 Python/3.13.4
+# Date: Sat, 02 Aug 2025 22:05:28 GMT
+# Content-Type: text/html; charset=utf-8
+# Content-Length: 11
+# Connection: close
+
+# hello world                                                                       curl.exe -X GET -i -w '\n' localhost:5000/no_contentuments\GitHub\Programming\Python\Using_Flask\API_With_Flask>
+# HTTP/1.1 204 NO CONTENT
+# Server: Werkzeug/2.2.3 Python/3.13.4
+# Date: Sat, 02 Aug 2025 22:05:43 GMT
+# Content-Type: application/json
+# Connection: close
+
+# PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask> curl.exe -X GET -i -w '\n' localhost:5000/exp
+# HTTP/1.1 200 OK
+# Server: Werkzeug/2.2.3 Python/3.13.4
+# Date: Sat, 02 Aug 2025 22:05:56 GMT
+# Content-Type: application/json
+# Content-Length: 31
+# Connection: close
+
+# {
+#   "message": "Hello World"
+# }
+
+# PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\API_With_Flask> 

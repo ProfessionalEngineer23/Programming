@@ -115,6 +115,96 @@ def delete_by_uuid(id):
 # curl.exe -X DELETE -i localhost:5000/person/11111111-589a-43b6-9a5d-d1601cf51111
 
 # Outputs: 
-# To be added...
+
+# --- Test 1: GET /count ---
+# Command:
+# curl.exe -X GET -i -w '\n' "localhost:5000/count"
+
+# Response:
+# HTTP/1.1 200 OK
+# Content-Type: application/json
+# {
+#   "data count": 5
+# }
+
+# --- Test 2: GET /person/<valid_uuid> ---
+# Command:
+# curl.exe -X GET -i localhost:5000/person/66c09925-589a-43b6-9a5d-d1601cf53287
+
+# Response:
+# HTTP/1.1 200 OK
+# Content-Type: application/json
+# {
+#   "address": "637 Carey Pass",
+#   "avatar": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+#   "city": "Gainesville",
+#   "country": "United States",
+#   "first_name": "Lilla",
+#   "graduation_year": 1985,
+#   "id": "66c09925-589a-43b6-9a5d-d1601cf53287",
+#   "last_name": "Aupol",
+#   "zip": "32627"
+# }
+
+# --- Test 3: GET /person/<invalid_uuid_format> ---
+# Command:
+# curl.exe -X GET -i localhost:5000/person/not-a-valid-uuid
+
+# Response:
+# HTTP/1.1 404 NOT FOUND
+# Content-Type: text/html
+# <html><title>404 Not Found</title><h1>Not Found</h1>...</html>
+
+# --- Test 4: GET /person/<nonexistent_valid_uuid> ---
+# Command:
+# curl.exe -X GET -i localhost:5000/person/11111111-589a-43b6-9a5d-d1601cf51111
+
+# Response:
+# HTTP/1.1 404 NOT FOUND
+# Content-Type: application/json
+# {
+#   "message": "person not found"
+# }
+
+# --- Test 5: DELETE /person/<valid_uuid> ---
+# Command:
+# curl.exe -X DELETE -i localhost:5000/person/66c09925-589a-43b6-9a5d-d1601cf53287
+
+# Response:
+# HTTP/1.1 200 OK
+# Content-Type: application/json
+# {
+#   "message": "Person with ID 66c09925-589a-43b6-9a5d-d1601cf53287 deleted"
+# }
+
+# --- Test 6: GET /count (after deletion) ---
+# Command:
+# curl.exe -X GET -i localhost:5000/count
+
+# Response:
+# HTTP/1.1 200 OK
+# {
+#   "data count": 4
+# }
+
+# --- Test 7: DELETE /person/<invalid_uuid_format> ---
+# Command:
+# curl.exe -X DELETE -i localhost:5000/person/not-a-valid-uuid
+
+# Response:
+# HTTP/1.1 404 NOT FOUND
+# Content-Type: text/html
+# <html><title>404 Not Found</title><h1>Not Found</h1>...</html>
+
+# --- Test 8: DELETE /person/<nonexistent_valid_uuid> ---
+# Command:
+# curl.exe -X DELETE -i localhost:5000/person/11111111-589a-43b6-9a5d-d1601cf51111
+
+# Response:
+# HTTP/1.1 404 NOT FOUND
+# Content-Type: application/json
+# {
+#   "message": "person not found"
+# }
 
 
