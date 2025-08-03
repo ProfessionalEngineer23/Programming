@@ -16,6 +16,9 @@ def hello_world():
 # To activate venv enviornment: 
 # C:\Users\nikit\Documents\GitHub\Programming\.venv\Scripts\Activate.ps1
 
+# To exit the venv enviornment:
+# deactivate 
+
 # To Host:
 # (.venv) PS C:\Users\nikit\Documents\GitHub\Programming\Python\Using_Flask\lab> flask --app server --debug run
 # >>
