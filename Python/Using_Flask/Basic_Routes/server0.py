@@ -1,4 +1,4 @@
-# Creating Flask apps:
+# Creating Flask Apps:
 
 # Create the main route.
 # Import the Flask class from the flask module
