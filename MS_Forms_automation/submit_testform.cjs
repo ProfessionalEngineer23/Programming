@@ -5,9 +5,8 @@ const readline = require('readline');
 const { parse } = require('csv-parse/sync');
 const { chromium } = require('playwright');
 
-// ====== EDIT THIS URL (your form's Respond link) ======
+
 const FORM_URL = "https://forms.office.com/Pages/ResponsePage.aspx?id=yxdjdkjpX06M7Nq8ji_V2igJW0GHZOdMp5lnhmhNqStURDU3V0ZTVFExUFNTSUVUWElRME44Wkc2Ti4u";
-// ======================================================
 
 function rlQuestion(q) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
