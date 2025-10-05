@@ -43,10 +43,10 @@ Source: https://www.youtube.com/watch?v=07v4WmKGCBc
 
 7. Lab 19/11/2024
 8. Matrix  in Programming 
-9. Learn MAchine Learning and Cybersecurity
+9. Learn Machine Learning and Cybersecurity
 10. gcc -E "File name" --> Removes comments from program
 11. .c --> .i --> .s --> .o --> .exe
 12.For loops array 20 by 20 multiplication.
 13. Adding and multiplying matrices of different sizes in C.
-14. Inverse and Transopse of MAtrices.
+14. Inverse and Transopse of Matrices.
 <Work in progress>
