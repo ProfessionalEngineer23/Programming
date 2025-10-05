@@ -40,14 +40,13 @@ Sand --> Silicon --> Semiconductors --> Transistors --> Logic Gates --> Circuits
 
 Source: https://www.youtube.com/watch?v=07v4WmKGCBc
 
-7. To navigate directories - cd (name) --> Go to named directory or cd ../ --> To go back directory.
-8. Lab 19/11/2024
-9. I need to read Assessments carefully in order to not get bad results. I'm not happy with 33%, therefore, I will try harder in Programming 2.
-10. Matrix  in Programming 
-11. Learn MAchine Learning and Cybersecurity
-12. gcc -E "File name" --> Removes comments from program
-13. .c --> .i --> .s --> .o --> .exe
-14.For loops array 20 by 20 multiplication.
-15. Adding and multiplying matrices of different sizes in C.
-16. Inverse and Transopse of MAtrices.
+
+7. Lab 19/11/2024
+8. Matrix  in Programming 
+9. Learn MAchine Learning and Cybersecurity
+10. gcc -E "File name" --> Removes comments from program
+11. .c --> .i --> .s --> .o --> .exe
+12.For loops array 20 by 20 multiplication.
+13. Adding and multiplying matrices of different sizes in C.
+14. Inverse and Transopse of MAtrices.
 <Work in progress>
