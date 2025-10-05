@@ -4,7 +4,7 @@ What I learnt:
 1. Msys Install
 2. GCC install and use
 3. Run C code using GCC
-4. MAkefile
+4. Makefile
 5. Q6 Product of 2 arguments
 6. From sand to C video:
 Sand is the material used for making semiconductors.
