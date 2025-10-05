@@ -10,8 +10,8 @@ This repository contains programming projects and exercises that I have complete
 |---------------|-----------------------------------------------------------------------------|
 | `Python/`     | Projects and apps written in Python. Includes Flask web apps and course exercises. |
 | `C_Prog/`     | C programming tasks from college modules including data structures and system-level code. |
-| `MS_Forms_automation/`| Shell script to automate random form submissions using curl commands or common js. |
 | `C++_Prog/`   | C++ assignments and practice projects using OOP, templates, and STL.         |
+| `MS_Forms_automation/`| Shell script to automate random form submissions using curl commands or common js. |
 | `Backend_Dev/`| Backend development practice using Node.js and Express.                     |
 | `React/`      | Frontend projects using React.js. Also includes learning experiments.        |
 | `Web_Dev/`    | HTML, CSS, and JavaScript-based web development exercises and mini-projects.|
