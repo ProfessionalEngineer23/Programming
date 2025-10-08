@@ -1,0 +1,20 @@
+# 0) I already have white256.pgm from your generator.
+#    If not, compile and run your generator first.
+
+# 1) Build tools:
+gcc pgm_to_tud.c -o pgm2tud && gcc tud_to_pgm.c -o tud2pgm
+
+# 2) Encode to .TUD:
+./pgm2tud white256.pgm white256.tud
+
+# 3) Decode back to PGM:
+./tud2pgm white256.tud roundtrip.pgm
+
+# 4) Double checks:
+head -4 white256.tud 
+head -4 roundtrip.pgm
+
+To compare file sizes: 
+wc -c white256.pgm white256.tud roundtrip.pgm
+
+* Used Butberry file opener to view the image 
