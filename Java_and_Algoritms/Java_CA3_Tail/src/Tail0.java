@@ -1,5 +1,5 @@
 // Name: Niki
-// Purpose: CA3 Java Tail program
+// Purpose: CA3 Java Tail program initial version
 // What? Enter Tail <number of lines to print> 
 
 import java.util.LinkedList;

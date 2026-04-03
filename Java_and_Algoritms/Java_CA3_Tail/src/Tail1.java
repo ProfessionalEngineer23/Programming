@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Example:
  *     java Tail 5 < tinyW.txt
  *
- * N. Mardari - Initial version
+ * N. Mardari - Revision 2 version
  */
 public class Tail1 {
 
