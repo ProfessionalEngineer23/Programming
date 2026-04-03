@@ -1,0 +1,86 @@
+make[1]: Entering directory '/home/N23L/Documents/Learning_Java/CA2/Java_CA2_Fuel_Efficiency'
+mkdir -p bin
+javac -d bin \
+src/EfficiencyStatsTask.java \
+src/Mileage.java \
+src/MileageRecord.java \
+src/MileageTestHarness.java
+echo "Compiled!"
+Compiled!
+echo ""
+
+echo "Running mileage_tiny.txt"
+Running mileage_tiny.txt
+java -cp bin Mileage data/mileage_tiny.txt
+Min efficiency: 6.765586034912719
+Max efficiency: 6.883610451306413
+Avg efficiency: 6.8245589519113805
+echo ""
+
+echo "Running mileage_4months.txt"
+Running mileage_4months.txt
+java -cp bin Mileage data/mileage_4months.txt
+Min efficiency: 6.25206611570248
+Max efficiency: 7.269607843137255
+Avg efficiency: 6.734389877337023
+echo ""
+
+echo "Running mileage_15months.txt"
+Running mileage_15months.txt
+java -cp bin Mileage data/mileage_15months.txt
+Min efficiency: 5.350710900473933
+Max efficiency: 8.27431421446384
+Avg efficiency: 6.780469328799142
+echo ""
+
+echo "Running mileage_10years.txt"
+Running mileage_10years.txt
+java -cp bin Mileage data/mileage_10years.txt
+Min efficiency: 5.561764705882353
+Max efficiency: 12.227520435967303
+Avg efficiency: 7.815639054789789
+echo ""
+
+echo "Running empty.txt"
+Running empty.txt
+java -cp bin Mileage data/empty.txt
+Count was 0 or below!
+Min efficiency: Infinity
+Max efficiency: -Infinity
+Avg efficiency: NaN
+echo ""
+
+echo "Running mileage_uno.txt"
+Running mileage_uno.txt
+java -cp bin Mileage data/mileage_uno.txt
+Count was 0 or below!
+Min efficiency: Infinity
+Max efficiency: -Infinity
+Avg efficiency: NaN
+echo ""
+
+echo "Running negative_distance.txt"
+Running negative_distance.txt
+java -cp bin Mileage data/negative_distance.txt
+Min efficiency: 1.6655172413793102
+Max efficiency: 1.6655172413793102
+Avg efficiency: 1.6655172413793102
+echo ""
+
+echo "zero_distance.txt"
+zero_distance.txt
+java -cp bin Mileage data/zero_distance.txt
+Min efficiency: 3.393442622950819
+Max efficiency: 3.393442622950819
+Avg efficiency: 3.393442622950819
+echo ""	
+
+echo "blank_lines_mileage.txt"
+blank_lines_mileage.txt
+java -cp bin Mileage data/blank_lines_mileage.txt
+Min efficiency: 6.455486542443064
+Max efficiency: 7.544117647058823
+Avg efficiency: 6.929445952180047
+echo ""	
+
+make[1]: Leaving directory '/home/N23L/Documents/Learning_Java/CA2/Java_CA2_Fuel_Efficiency'
