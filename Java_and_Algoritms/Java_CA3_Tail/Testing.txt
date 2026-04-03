@@ -1,0 +1,281 @@
+make[1]: Entering directory '/c/Users/nikit/Documents/GitHub/Programming/Java_and_Algoritms/Java_CA3_Tail'
+mkdir -p bin
+javac -d bin \
+src/Tail1.java \
+src/TailTestHarness.java
+echo "Compiled!"
+Compiled!
+echo ""
+
+echo "Running sample.txt"
+Running sample.txt
+java -cp bin Tail1 20 < data/sample.txt
+LED1
+LED2
+LED3
+LED4
+LED5
+LED6
+LED7
+END
+echo ""
+
+echo "Running 1Kints.txt"
+Running 1Kints.txt
+java -cp bin Tail1 20 < data/1Kints.txt
+ 165980
+ 508884
+ 750319
+-795078
+-908450
+ 655522
+-503323
+ 225022
+ 132875
+-578453
+-651611
+ 240984
+-623898
+-224982
+ 669548
+ 699096
+ 205562
+ 314844
+ 341808
+ 745942
+echo ""
+
+echo "Running 2Kints.txt"
+Running 2Kints.txt
+java -cp bin Tail1 20 < data/2Kints.txt
+-969984
+ 135509
+ -38790
+ 634449
+-175472
+-282890
+-879920
+-558505
+ 999372
+ 916031
+ 158641
+ 949397
+ 388158
+ 273789
+ 235287
+-620373
+-855640
+ 492487
+-480968
+-598151
+echo ""
+
+echo "Running 4Kints.txt"
+Running 4Kints.txt
+java -cp bin Tail1 20 < data/4Kints.txt
+ 336445
+-674816
+ 362988
+ 601538
+ 601030
+-198258
+-387756
+ 409354
+ -32402
+ 190869
+ 335604
+-371891
+ 663988
+-754721
+ 874436
+-119542
+-888246
+  57208
+  11111
+  15448
+echo ""
+
+echo "Running 8Kints.txt"
+Running 8Kints.txt
+java -cp bin Tail1 20 < data/8Kints.txt
+ 585867
+ 416904
+ 100585
+-906511
+ 755017
+ -84720
+-871206
+-668773
+ 439838
+  72927
+-213277
+-473984
+ 748266
+ -90529
+ 383472
+-241971
+-250509
+ 230215
+ 519718
+-972754
+echo ""
+
+echo "Running largeT.txt"
+Running largeT.txt
+java -cp bin Tail1 20 < data/largeT.txt
+945502
+661649
+272769
+583490
+540490
+853672
+130968
+877774
+651976
+319114
+619992
+105396
+295698
+963273
+898432
+ 62816
+663545
+740340
+212307
+364831
+echo ""
+
+echo "Running largeW.txt"
+Running largeW.txt
+java -cp bin Tail1 20 < data/largeW.txt
+478510
+405101
+705042
+536107
+496486
+670573
+141720
+150243
+587173
+278584
+970523
+192618
+528476
+387221
+831753
+478292
+563352
+494315
+935085
+403161
+echo ""
+
+echo "Running medTale.txt"
+Running medTale.txt
+java -cp bin Tail1 20 < data/medTale.txt
+the hangman ever busy and ever worse than useless was in
+constant requisition now stringing up long rows of miscellaneous
+criminals now hanging a housebreaker on saturday who had been
+taken on tuesday now burning people in the hand at newgate by
+the dozen and now burning pamphlets at the door of westminster hall
+today taking the life of an atrocious murderer and tomorrow of a
+wretched pilferer who had robbed a farmers boy of sixpence
+
+all these things and a thousand like them came to pass in
+and close upon the dear old year one thousand seven hundred
+and seventyfive  environed by them while the woodman and the
+farmer worked unheeded those two of the large jaws and those
+other two of the plain and the fair faces trod with stir enough
+and carried their divine rights with a high hand  thus did the
+year one thousand seven hundred and seventyfive conduct their
+greatnesses and myriads of small creaturesthe creatures of this
+chronicle among the restalong the roads that lay before them
+
+
+
+echo ""
+
+echo "Running MobyDick.txt"
+Running MobyDick.txt
+java -cp bin Tail1 20 < data/MobyDick.txt
+flag, which calmly undulated, with ironical coincidings, over the
+destroying billows they almost touched;- at that instant, a red arm
+and a hammer hovered backwardly uplifted in the open air, in the act
+of nailing the flag faster and yet faster to the subsiding spar. A
+sky-hawk that tauntingly had followed the main-truck downwards from
+its natural home among the stars, pecking at the flag, and
+incommoding Tashtego there; this bird now chanced to intercept its
+broad fluttering wing between the hammer and the wood; and
+simultaneously feeling that etherial thrill, the submerged savage
+beneath, in his death-gasp, kept his hammer frozen there; and so the
+bird of heaven, with archangelic shrieks, and his imperial beak
+thrust upwards, and his whole captive form folded in the flag of
+Ahab, went down with his ship, which, like Satan, would not sink to
+hell till she had dragged a living part of heaven along with her, and
+helmeted herself with it.
+
+Now small fowls flew screaming over the yet yawning gulf; a sullen
+white surf beat against its steep sides; then all collapsed, and the
+great shroud of the sea rolled on as it rolled five thousand years
+ago.
+echo ""
+
+echo "Running tinyT.txt"
+Running tinyT.txt
+java -cp bin Tail1 20 < data/tinyT.txt
+23
+50
+10
+99
+18
+23
+98
+84
+11
+10
+48
+77
+13
+54
+98
+77
+77
+68
+echo ""
+
+echo "Running tinyTale.txt"
+Running tinyTale.txt
+java -cp bin Tail1 20 < data/tinyTale.txt
+it was the best of times it was the worst of times
+it was the age of wisdom it was the age of foolishness
+it was the epoch of belief it was the epoch of incredulity
+it was the season of light it was the season of darkness
+it was the spring of hope it was the winter of despair
+echo ""
+
+echo "Running tinytinyTale.txt"
+Running tinytinyTale.txt
+java -cp bin Tail1 20 < data/tinytinyTale.txt
+it was the best of times it was the worst of times
+echo ""
+
+echo "Running tinyW.txt"
+Running tinyW.txt
+java -cp bin Tail1 20 < data/tinyW.txt
+84
+48
+68
+10
+18
+98
+12
+23
+54
+57
+48
+33
+16
+77
+11
+29
+make[1]: Leaving directory '/c/Users/nikit/Documents/GitHub/Programming/Java_and_Algoritms/Java_CA3_Tail'
