@@ -1,3 +1,3 @@
-## This is part of CA3, making a Tail command line programme 
+# This is part of CA3, making a Tail command line programme 
 
-# To Do: Look at Unit testing and Gradle
+## To Do: Look at Unit testing and Gradle
