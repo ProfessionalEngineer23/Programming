@@ -3,35 +3,11 @@ Programmer: Niki Mardari, B00159642
 Purpose: CA1 Word Counter
 */
 
-/**
- * Package: CA1
- * 
- * This package organizes related classes for Continuous Assessment 1 (CA1).
- * Packages in Java provide a namespace to avoid naming conflicts and improve
- * code organization by grouping related classes together.
- * 
- * Why you need the package statement here:
- * - The package declaration must match your file's directory structure
- * - Since your file is in the CA1 folder, the package must be declared as "CA1"
- * - Without it, the class would be in the default (unnamed) package
- * 
- * What is a Package in Java?
- * A package is a namespace mechanism that:
- * - Groups related classes logically
- * - Prevents naming conflicts (e.g., two classes named "WordCount" in different packages)
- * - Controls access visibility via access modifiers (public, protected, private, package-private)
- * - Maps to your file system directory structure
- * 
- * Why you usually don't need to type it:
- * - Simple practice programs often use the default package (no package statement)
- * - However, professional projects always use packages for better organization
- * - Your CA1 assignment likely requires proper package structure for submission
- */
-package CA1; // Package name
 import java.util.ArrayList; // For array manipulation
 import java.util.Scanner; // For input stream
+// import java.util.Collections; // For sort method
 // import java.io.FILE; // For file objects
-// import java.io.IOException; // For exceptions in File opening
+// import java.io IOException; // For exceptions in File opening
 
 // Class for representing a single word and it's occurence as an object
 public class WordCount
@@ -90,16 +66,39 @@ public class WordCount
         return a; // Retrurn list of words
     }
 
+    // Sort method to sort ArrayList word objects descending order according to numerical occurence
+    static void sort(ArrayList<WordCount>a)
+    {   // sort method on ArrayList
+        a.sort((w1, w2) -> {
+            // First compare two object words by their occurence value
+            int cmp = Integer.compare(w2.occ, w1.occ);
+            // If the occurence comparison is not the same
+            if (cmp != 0) {
+                return cmp;
+            }
+            // Otherwise if the difference is 0, then we compare based on alphabetical order
+            else {
+                return -1 * w1.word.compareTo(w2.word);
+            }
+        });
+    }
+    // Sources:
+
+    // https://www.w3schools.com/java/ref_arraylist_sort.asp -> Sort method in reverse alphabetical order
+    // https://www.baeldung.com/java-comparator-comparable#:~:text=The%20Integer.,being%20passed%20as%20an%20argument. -> Integer.compare and Word.compare
+
     // toString method for formatting word and it's occurance
     public String toString() // Public so that it calls automatically
     {
-        return this.word + " " + this.occ ;
+        return this.occ + " " + this.word ;
     }
 
     public static void main(String[] args)
     {
         // Read words into created array list
         ArrayList<WordCount> a = readWords();
+        // Sort words on their occurence
+        sort(a);
         // Iterate through processed list
         for(WordCount s1 : a)
         {
@@ -108,3 +107,6 @@ public class WordCount
         }
     } // End of main
 } // End of class WordCount
+
+// To compile: javac WordCount.java
+// To run: java WordCount < ../data/tinyTale.txt
