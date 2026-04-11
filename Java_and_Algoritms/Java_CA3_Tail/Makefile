@@ -1,40 +1,46 @@
 # Makefile for CA3 Tail program
 
 # Usage:
-# make all: compiles java and runs on all txt files
-# make compile: makes bin dir and "javacs" all ca3 java files
-# make run-harness: runs TailTestHarness
-# make run-tests:  Copies all data txt files specified 
-# make clean: removes all .class files in bin directory
+# To compile the program and tests: make all
+# To run the program on sample.txt: make run
+# To run the program on all provided txt files with k = 20: make run-tests
+# To run manual invalid input checks: make run-invalid-tests
+# To run JUnit tests: make junit
+# To clean up compiled class files: make clean
 
 # Directories
 SRC = src
 BIN = bin
 DATA = data
-MAIN = Tail1
-HARNESS = TailTestHarness
-# make all 
-all: compile
-	make run-tests > Testing.txt
+LIB = lib
 
-# Compile CA3 Java files, automatically creates bin folder if it doesn't exist
+# Files and classes
+MAIN = Tail
+TEST = TailTest
+JUNIT_JAR = $(LIB)/junit-platform-console-standalone-6.0.3.jar
+
+# Detect platform and choose classpath separator
+ifeq ($(OS),Windows_NT)
+	CP_SEP = ;
+else
+	CP_SEP = :
+endif
+
+# Compile program and JUnit tests
 compile:
 	mkdir -p $(BIN)
-	javac -d $(BIN) \
-	$(SRC)/Tail1.java \
-	$(SRC)/TailTestHarness.java
+	javac -cp "$(JUNIT_JAR)$(CP_SEP)$(SRC)" -d $(BIN) \
+	$(SRC)/Tail.java \
+	$(SRC)/TailTest.java
 	echo "Compiled!"
-# If want to compile any java file then uncomment:
-# javac -d $(BIN) $(wildcard $(SRC)/*.java)
 
-# To run program with harness code
-run-harness: compile
-	java -cp $(BIN) $(HARNESS) $(DATA)
-	echo "Testing!"
+# Run the app on sample.txt
+run: compile
+	java -cp $(BIN) $(MAIN) 5 < $(DATA)/sample.txt
+	echo ""
 
-# To run program with all test files
+# Run app on all provided txt files with k = 20
 run-tests: compile
-
 	echo ""
 	echo "Running sample.txt"
 	java -cp $(BIN) $(MAIN) 20 < $(DATA)/sample.txt
@@ -86,12 +92,31 @@ run-tests: compile
 
 	echo "Running tinyW.txt"
 	java -cp $(BIN) $(MAIN) 20 < $(DATA)/tinyW.txt
-# for file in $(DATA)/*.txt; do \
-# echo "Running $$file"; \
-# java -cp $(BIN) $(MAIN) $$file; \
-# echo ""; \
-# done
+	echo ""
 
-# remove compiled class files
+# Manual invalid input checks
+run-invalid-tests: compile
+	echo ""
+	echo "Testing missing argument"
+	java -cp $(BIN) $(MAIN)
+	echo ""
+
+	echo "Testing k = 0"
+	java -cp $(BIN) $(MAIN) 0 < $(DATA)/sample.txt
+	echo ""
+
+	echo "Testing k = -1"
+	java -cp $(BIN) $(MAIN) -1 < $(DATA)/sample.txt
+	echo ""
+
+	echo "Testing invalid string input"
+	java -cp $(BIN) $(MAIN) abc < $(DATA)/sample.txt
+	echo ""
+
+# Run JUnit tests
+junit: compile
+	java -jar $(JUNIT_JAR) execute --class-path $(BIN) --scan-class-path
+
+# Remove compiled class files
 clean:
 	rm -f $(BIN)/*.class

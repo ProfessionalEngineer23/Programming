@@ -2,54 +2,139 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class TailTest {
-    
-    @Test
-    public void mainTest(){
-    // Test case 1: Check if program prints the correct error message when k is less that 0
-    // Expected output: "Error: k must be a positive integer."
-
-    // Test case 2: Check if program prints the correct error message when k is not provided
-    // Expected output: "Usage: java Tail <k> < inputfile"
-    }
-
-
-    @Test
-    public void LoadTailQueueTest() {
-    // Test case 1: Check Queue input of 20 lines from MobyDick.txt with k = 10
 /*
-Expected output:
-the erect spar yet visible, together with long streaming yards of the
-flag, which calmly undulated, with ironical coincidings, over the
-destroying billows they almost touched;- at that instant, a red arm
-and a hammer hovered backwardly uplifted in the open air, in the act
-of nailing the flag faster and yet faster to the subsiding spar. A
-sky-hawk that tauntingly had followed the main-truck downwards from
-its natural home among the stars, pecking at the flag, and
-incommoding Tashtego there; this bird now chanced to intercept its
-broad fluttering wing between the hammer and the wood; and
-simultaneously feeling that etherial thrill, the submerged savage
-beneath, in his death-gasp, kept his hammer frozen there; and so the
-bird of heaven, with archangelic shrieks, and his imperial beak
-thrust upwards, and his whole captive form folded in the flag of
-Ahab, went down with his ship, which, like Satan, would not sink to
-hell till she had dragged a living part of heaven along with her, and
-helmeted herself with it.
+Tested File used: tinyTale.txt
 
-Now small fowls flew screaming over the yet yawning gulf; a sullen
-white surf beat against its steep sides; then all collapsed, and the
-great shroud of the sea rolled on as it rolled five thousand years
-ago.
-*/
+it was the best of times it was the worst of times
+it was the age of wisdom it was the age of foolishness
+it was the epoch of belief it was the epoch of incredulity
+it was the season of light it was the season of darkness
+it was the spring of hope it was the winter of despair
+
+ */
+
+public class TailTest {
+
+    // Test loadTailQueue when k = 1 the output is the last line of the input
+    @Test
+    public void loadTailQueue_kEquals1_returnsLastLine() throws Exception {
+        Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+        Queue<String> result = Tail.loadTailQueue(scanner, 1);
+
+        assertEquals(1, result.size());
+        assertEquals("it was the spring of hope it was the winter of despair", result.poll());
+
+        scanner.close();
+    }
+
+    // Test loadTailQueue when k = 3 the output is the last three lines of the input
+    @Test
+    public void loadTailQueue_kEquals3_returnsLastThreeLines() throws Exception {
+        Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+        Queue<String> result = Tail.loadTailQueue(scanner, 3);
+
+        assertEquals(3, result.size());
+        assertEquals("it was the epoch of belief it was the epoch of incredulity", result.poll());
+        assertEquals("it was the season of light it was the season of darkness", result.poll());
+        assertEquals("it was the spring of hope it was the winter of despair", result.poll());
+
+        scanner.close();
+    }
+
+    // Test loadTailQueue when k is greater than the number of lines in the input, the output should be all lines
+    @Test
+    public void loadTailQueue_kGreaterThanInputSize_returnsAllLines() throws Exception {
+        Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+        Queue<String> result = Tail.loadTailQueue(scanner, 15);
+
+        assertEquals(5, result.size());
+        assertEquals("it was the best of times it was the worst of times", result.poll());
+        assertEquals("it was the age of wisdom it was the age of foolishness", result.poll());
+        assertEquals("it was the epoch of belief it was the epoch of incredulity", result.poll());
+        assertEquals("it was the season of light it was the season of darkness", result.poll());
+        assertEquals("it was the spring of hope it was the winter of despair", result.poll());
+
+        scanner.close();
+    }
+
+    // Test runTail when k = 2 the output should be the last two lines of the input
+    @Test
+    public void runTail_kEquals2_printsLastTwoLines() throws Exception{
+        Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream out = new PrintStream(outContent);
+
+        Tail.runTail(2, scanner, out);
+
+        String expected = "it was the season of light it was the season of darkness" + System.lineSeparator() +
+                          "it was the spring of hope it was the winter of despair" + System.lineSeparator();
+
+        assertEquals(expected, outContent.toString());
+
+        scanner.close();
+        out.close();
+    }
+
+    // Test runTailApp when k = 3 the output should be the last three lines of the input
+    @Test 
+    public void runTailApp_kEquals5_printsLastFiveLines() throws Exception {
+        Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream out = new PrintStream(outContent);
+
+        String[] args = {"3"};
+        Tail.runTailApp(args, scanner, out);
+
+        String expected =
+                "it was the epoch of belief it was the epoch of incredulity" + System.lineSeparator() +
+                "it was the season of light it was the season of darkness" + System.lineSeparator() +
+                "it was the spring of hope it was the winter of despair" + System.lineSeparator();
+
+        assertEquals(expected, outContent.toString());
+
+        scanner.close();
+        out.close();
+    }
+
+    // Test runTailApp when k = 0 the output should be an error message
+    @Test
+    public void runTailApp_zero_printsErrorMessage() throws Exception {
+    Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    PrintStream out = new PrintStream(outContent);
+
+    String[] args = {"0"};
+    Tail.runTailApp(args, scanner, out);
+
+    String expected = "Error: k must be greater than 0." + System.lineSeparator();
+
+    assertEquals(expected, outContent.toString());
+
+    scanner.close();
+    out.close();
     }
 
     @Test
-    public void printQueueTest() {
-        // Test case 1: Check if the printQueue method correctly prints the contents of the queue in order
-        // Expected output: The contents of the queue printed in the order they were added
+    public void runTailApp_negative_printsErrorMessage() throws Exception {
+    Scanner scanner = new Scanner(new java.io.File("data/tinyTale.txt"));
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    PrintStream out = new PrintStream(outContent);
+
+    String[] args = {"-1"};
+    Tail.runTailApp(args, scanner, out);
+
+    String expected = "Error: k must be greater than 0." + System.lineSeparator();
+
+    assertEquals(expected, outContent.toString());
+
+    scanner.close();
+    out.close();
+    }
 
 }
+// Excecuted from root dir
+// To compile: javac -cp "lib\junit-platform-console-standalone-6.0.3.jar;src" -d bin src\Tail.java src\TailTest.java
+// To run: java -jar lib\junit-platform-console-standalone-6.0.3.jar execute --class-path bin --scan-class-path

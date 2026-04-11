@@ -1,3 +1,4 @@
+package Old;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -69,3 +70,5 @@ public class Tail1 {
         printQueue(words);
     }
 }
+
+// TODO: Make Tail one function callable in main 

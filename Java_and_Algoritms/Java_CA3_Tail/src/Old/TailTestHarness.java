@@ -1,3 +1,4 @@
+package Old;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
@@ -62,10 +63,11 @@ public class TailTestHarness {
     }
 
     public static void main(String[] args) {
-        runTest("sample.txt with k=3", "data/sample.txt", 3, "LED6 LED7 END");
-        runTest("sample.txt with k=5", "data/sample.txt", 5, "LED4 LED5 LED6 LED7 END");
-        runTest("sample.txt with k=1", "data/sample.txt", 1, "END");
-        runTest("sample.txt with k=8", "data/sample.txt", 8,
-                "LED1 LED2 LED3 LED4 LED5 LED6 LED7 END");
+        runTest("sample.txt with k=3", "../data/sample.txt", 3, "LED7 LED7.1 LED7.2 LED7.3 LED7.4 LED7.5 LED7.6 LED7.7 LED7.8 LED7.9 LED8 This is the END");
+        runTest("sample.txt with k=5", "../data/sample.txt", 5, "LED5 LED6 LED7 LED7.1 LED7.2 LED7.3 LED7.4 LED7.5 LED7.6 LED7.7 LED7.8 LED7.9 LED8 This is the END");
+        runTest("sample.txt with k=1", "../data/sample.txt", 1, "This is the END");
+        runTest("sample.txt with k=8", "../data/sample.txt", 8, "LED2 LED3 LED4 LED5 LED6 LED7 LED7.1 LED7.2 LED7.3 LED7.4 LED7.5 LED7.6 LED7.7 LED7.8 LED7.9 LED8 This is the END");
+        runTest("sample.txt with k=0", "../data/sample.txt", 0, "");
+        runTest("sample.txt with k=-1", "../data/sample.txt", -1, "");
     }
 }
